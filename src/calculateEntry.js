@@ -1,14 +1,13 @@
 const { prices } = require('../data/zoo_data');
 const data = require('../data/zoo_data');
 
-const objeto = {
-  child: 0,
-  adult: 0,
-  senior: 0,
-};
-
 function countEntrants(entrants) {
   // seu código aqui
+  const objeto = {
+    child: 0,
+    adult: 0,
+    senior: 0,
+  };
   return entrants.reduce((acc, item) => {
     if (item.age < 18) {
       acc.child += 1;
@@ -29,7 +28,6 @@ function calculateEntry(entrants) {
   const retornoCount = countEntrants(entrants);
   const variavel = (retornoCount.child * prices.child)
   + (retornoCount.adult * prices.adult) + (retornoCount.senior * prices.senior);
-  console.log(variavel);
   return variavel;
 }
 
