@@ -51,6 +51,5 @@ function getAnimalMap(options = { includeNames: false, sorted: false, sex: false
   };
   return resultado;
 }
-console.log(JSON.stringify(getAnimalMap({ includeNames: true, sex: 'female' })));
 
 module.exports = getAnimalMap;
