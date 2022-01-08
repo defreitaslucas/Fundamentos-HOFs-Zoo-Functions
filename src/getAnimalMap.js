@@ -17,7 +17,7 @@ function categorizaLocation() {
   return animal;
 }
 
-function includeTrue(array, options) {
+function includeNamesTrue(array, options) {
   return array.reduce((acc, elemento) => {
     let nomeAnimais;
     if (options.sex) {
@@ -44,10 +44,10 @@ function getAnimalMap(options = { includeNames: false, sorted: false, sex: false
   const specieSe = species.filter((elemento) => elemento.location === 'SE');
   const specieSw = species.filter((elemento) => elemento.location === 'SW');
   const resultado = {
-    NE: includeTrue(specieNe, options),
-    NW: includeTrue(specieNw, options),
-    SE: includeTrue(specieSe, options),
-    SW: includeTrue(specieSw, options),
+    NE: includeNamesTrue(specieNe, options),
+    NW: includeNamesTrue(specieNw, options),
+    SE: includeNamesTrue(specieSe, options),
+    SW: includeNamesTrue(specieSw, options),
   };
   return resultado;
 }
